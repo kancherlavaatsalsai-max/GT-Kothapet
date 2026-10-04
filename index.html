@@ -2328,6 +2328,23 @@
   <!-- Toast Notification Container -->
   <div class="toast-container" id="toastContainer"></div>
 
+  <!-- Firebase App SDK (Official Google CDN for vanilla web apps) -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyAyOfgCkasLa7vgawa3zEZpnM2JMUUggYY",
+      authDomain: "gt-kothapet.firebaseapp.com",
+      projectId: "gt-kothapet",
+      storageBucket: "gt-kothapet.firebasestorage.app",
+      messagingSenderId: "542329004705",
+      appId: "1:542329004705:web:c084672082fd66c12f46e0"
+    };
+
+    window.firebaseConfig = firebaseConfig;
+    window.firebaseApp = initializeApp(firebaseConfig);
+  </script>
+
   <!-- Application Scripts -->
   <script src="services_data.js"></script>
   <script src="app.js"></script>
