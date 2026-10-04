@@ -55,17 +55,22 @@
           </div>
         </div>
 
-        <div id="loginErrorMessage" class="login-error-msg" style="display:none;"></div>
-
-        <div style="display:flex; gap:0.6rem; margin-top:0.6rem;">
-          <button type="button" class="filter-pill-btn" onclick="dismissLoginModal()" style="flex:1; justify-content:center; padding:0.65rem 0.5rem; background:rgba(255,255,255,0.06); font-size:0.8rem;">
-            Cancel / Owner
+        <!-- Quick Account Selector Chips -->
+        <div style="display:flex; gap:0.5rem; margin-bottom:0.75rem;">
+          <button type="button" class="filter-pill-btn" onclick="selectLoginRole('owner')" style="flex:1; justify-content:center; padding:0.45rem 0.5rem; font-size:0.75rem; font-weight:700; background:rgba(255,255,255,0.06); border-color:var(--border-light); color:var(--text-main);">
+            <i class="fa-solid fa-crown" style="color:#f59e0b; margin-right:4px;"></i> Salon Owner
           </button>
-          <button type="submit" class="btn-login-submit-main" id="btnLoginSubmit" style="flex:2; margin-top:0;">
-            <i class="fa-solid fa-arrow-right-to-bracket"></i>
-            <span>Sign In to Terminal</span>
+          <button type="button" class="filter-pill-btn" onclick="selectLoginRole('manager')" style="flex:1; justify-content:center; padding:0.45rem 0.5rem; font-size:0.75rem; font-weight:700; background:rgba(255,255,255,0.06); border-color:var(--border-light); color:var(--text-main);">
+            <i class="fa-solid fa-briefcase" style="color:#00FFFF; margin-right:4px;"></i> Manager
           </button>
         </div>
+
+        <div id="loginErrorMessage" class="login-error-msg" style="display:none; margin-bottom:0.6rem;"></div>
+
+        <button type="submit" class="btn-login-submit-main" id="btnLoginSubmit" style="width:100%; margin-top:0.25rem;">
+          <i class="fa-solid fa-arrow-right-to-bracket"></i>
+          <span>Sign In to Terminal</span>
+        </button>
       </form>
     </div>
   </div>
@@ -135,7 +140,7 @@
 
         <div class="nav-group-label" style="margin-top:0.75rem;">PORTAL</div>
 
-        <a href="../salon-staff-manager/index.html" class="sidebar-nav-item" id="sidebarStaffPortalLink" title="Staff Manager Portal">
+        <a href="https://kancherlavaatsalsai-max.github.io/Green-Trends-kothapet/" target="_blank" rel="noopener noreferrer" class="sidebar-nav-item" id="sidebarStaffPortalLink" title="Staff Manager Portal (Open Live Staff Portal)">
           <i class="fa-solid fa-arrow-up-right-from-square"></i>
           <span>Staff Manager Portal</span>
         </a>
@@ -1374,10 +1379,6 @@
                 <i class="fa-solid fa-unlock-keyhole"></i> Unlock Admin Panel
               </button>
             </div>
-            
-            <div style="margin-top: 1rem; font-size: 0.74rem; color: var(--text-subtle);">
-              Default Master PIN: <strong style="color: #00FFFF;">1234</strong>
-            </div>
           </div>
 
           <!-- State B: Unlocked Admin Workspace -->
@@ -2327,6 +2328,10 @@
 
   <!-- Toast Notification Container -->
   <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Google Firebase App & Firestore SDKs (100% Free Real-Time Cloud Sync) -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
 
   <!-- Application Scripts -->
   <script src="services_data.js"></script>
